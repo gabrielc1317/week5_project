@@ -36,7 +36,7 @@ function App() {
 
     const fetchPets = async () => {
       try {
-        const res = await axios.get("https://api.petfinder.com/v2/animals", {
+        const res = axios.get("https://api.petfinder.com/v2/animals", {
           headers: {
             Authorization: `Bearer ${token}`
           },
