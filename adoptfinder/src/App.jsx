@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 function App() {
   const [token, setToken] = useState("");
@@ -77,6 +78,7 @@ function App() {
   };
 
   return (
+    <div className="container">
     <div className="p-4 max-w-3xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">🐾 Pets Available for Adoption</h1>
 
@@ -98,14 +100,14 @@ function App() {
           <option>Senior</option>
         </select>
       </div>
-
+        
       {/* Main Dashboard */}
       {loading ? (
         <p>Loading pets...</p>
       ) : filteredPets.length === 0 ? (
         <p>No pets found for selected filter.</p>
       ) : (
-        <div className="border p-4 rounded">
+        <div className="pet-card">
           <h2 className="font-semibold text-xl">{filteredPets[currentIndex].name}</h2>
           <p>
             {filteredPets[currentIndex].breeds.primary} •{" "}
@@ -166,8 +168,9 @@ function App() {
               </li>
             ))}
         </ul>
+        </div>
       </div>
-    </div>
+    </div>  
   );
 }
 

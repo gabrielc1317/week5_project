@@ -1,42 +1,89 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+* Base page style */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa; /* Light gray background */
+  color: #333;
+}
+
+/* App container */
+.container {
+  max-width: 850px;
+  margin: 2rem auto;
   padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Heading */
+h1 {
   text-align: center;
+  color: #444;
+  margin-bottom: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Pet card */
+.pet-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pet-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.pet-card a {
+  color: #007acc;
+  text-decoration: none;
 }
 
-.card {
-  padding: 2em;
+.pet-card a:hover {
+  text-decoration: underline;
 }
 
-.read-the-docs {
-  color: #888;
+/* Button */
+button {
+  background-color: #007acc;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Inputs and selects */
+input[type="text"],
+select {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0 1rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* History section */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f0f4f8;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
 }
